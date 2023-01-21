@@ -10,12 +10,16 @@
 Console.WriteLine("Введите число");
 int number = int.Parse(Console.ReadLine()!);
 
-float PositiveNumber = MathF.Sqrt(number*number);
-if (PositiveNumber<100)
+if (number<100)
 {
     Console.WriteLine("третьего числа нет");
 }
 else 
 {
-    Console.WriteLine();
+    while (number>999)
+{
+    number=number/10;
+}
+number=number%10;
+Console.WriteLine(number);
 }
